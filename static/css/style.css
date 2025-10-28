@@ -1,0 +1,271 @@
+/*
+  Archivo: style.css - Diseño de Alto Contraste (Blanco, Negro, Naranja)
+*/
+
+/* Variables y Tipografía */
+:root {
+    --color-acento: #FF8800;
+    /* Naranja/Amarillo Vibrante (Alto Contraste) */
+    --color-texto: #1A1A1A;
+    /* Negro Profundo */
+    --color-texto-claro: #FFFFFF;
+    /* Blanco Puro */
+    --color-fondo: #F5F5F5;
+    /* Blanco Roto */
+    --color-acento-claro: #333333;
+    /* Fondo gris oscuro para el hover */
+    --font-mono: 'Inter', sans-serif;
+}
+
+body {
+    font-family: var(--font-mono);
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    line-height: 1.6;
+}
+
+/* 1. Navbar y Footer (Alto Contraste) */
+.navbar {
+    background-color: var(--color-texto) !important;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand,
+.nav-link {
+    color: var(--color-texto-claro) !important;
+    font-weight: 700;
+}
+
+.nav-link.active {
+    color: var(--color-acento) !important;
+    border-bottom: 2px solid var(--color-acento);
+}
+
+.footer-dark {
+    background-color: var(--color-texto);
+    color: var(--color-fondo);
+}
+
+.text-acento {
+    color: var(--color-acento) !important;
+    text-decoration: none;
+}
+
+/* 2. Sección Hero (Fondo Negro) */
+.hero-section-dark {
+    background-color: var(--color-texto);
+    color: var(--color-texto-claro);
+    padding-top: 100px;
+}
+
+.etiqueta-inicio {
+    color: var(--color-acento);
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.titulo-hero {
+    font-size: 4.5rem;
+    /* Título gigante */
+    font-weight: 900;
+    line-height: 1.1;
+}
+
+/* Títulos de Sección */
+.titulo-seccion-acento {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-acento);
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--color-acento);
+    display: inline-block;
+}
+
+.titulo-seccion-claro {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--color-texto-claro);
+    padding-bottom: 5px;
+    border-bottom: 4px solid var(--color-acento);
+    display: inline-block;
+}
+
+/* Botones y CTA (Color de acento) */
+.btn-acento {
+    background-color: var(--color-acento);
+    border-color: var(--color-acento);
+    color: var(--color-texto);
+    /* Texto oscuro sobre el acento */
+    font-weight: 700;
+    border-radius: 0;
+    /* Bordes cuadrados */
+    transition: all 0.3s ease;
+}
+
+.btn-acento:hover {
+    background-color: #CC7000;
+    border-color: #CC7000;
+    color: var(--color-texto-claro);
+    transform: translateY(-2px);
+}
+
+.btn-enlace-secundario {
+    color: var(--color-acento);
+    font-weight: 700;
+    text-decoration: none;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--color-acento);
+    transition: color 0.3s ease;
+}
+
+.btn-enlace-secundario:hover {
+    color: var(--color-texto);
+}
+
+/* 3. Sección About y Fotos */
+.perfil-texto-grande {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.perfil-texto-base {
+    font-size: 1.1rem;
+}
+
+.foto-perfil-monocromo {
+    border-radius: 10px;
+    filter: grayscale(100%) contrast(1.1);
+    /* Alto Contraste B&W */
+    border: 5px solid var(--color-acento);
+    transition: filter 0.5s ease;
+}
+
+.foto-perfil-monocromo:hover {
+    filter: grayscale(0%);
+}
+
+/* 4. Skills y Módulos Oscuros (Flexbox) */
+.modulo-habilidad-dark {
+    background-color: var(--color-texto);
+    color: var(--color-texto-claro);
+    padding: 30px;
+    border-radius: 0;
+    border-left: 5px solid var(--color-acento);
+    height: 100%;
+    transition: background-color 0.3s ease;
+}
+
+.modulo-habilidad-dark h4 {
+    color: var(--color-acento);
+    font-weight: 700;
+}
+
+.icono-habilidad-acento {
+    font-size: 2rem;
+    color: var(--color-acento);
+    margin-bottom: 10px;
+}
+
+.lista-skills-acento {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.lista-skills-acento li::before {
+    content: "•";
+    color: var(--color-acento);
+    font-weight: bold;
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em;
+}
+
+/* 5. Portafolio (Tarjetas Limpias) */
+.proyecto-tarjeta-clean {
+    border: 1px solid #ddd;
+    border-radius: 0;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.proyecto-tarjeta-clean:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card-title-acento {
+    color: var(--color-acento);
+    font-weight: 700;
+}
+
+.card-text-base {
+    color: var(--color-texto);
+}
+
+.btn-enlace-acento {
+    color: var(--color-acento);
+    font-weight: 700;
+    text-decoration: none;
+    border-bottom: 1px dotted var(--color-acento);
+}
+
+.btn-enlace-acento:hover {
+    color: var(--color-texto);
+}
+
+/* 6. Formulario Dark (Contacto) */
+/*
+    AJUSTES FINOS PARA LA SECCIÓN CONTACTO (Formulario más limpio)
+*/
+
+.formulario-dark {
+    /* Mantener el fondo oscuro */
+    background-color: var(--color-acento-claro);
+    /* #333333 */
+    border-radius: 5px;
+
+    /* Añadimos más padding interno para que no se vea tan pegado al borde */
+    padding: 30px !important;
+
+    /* Línea de acento sutil */
+    border: 1px solid rgba(255, 136, 0, 0.2);
+}
+
+.form-label-claro {
+    /* Aseguramos que solo las etiquetas se vean bien */
+    color: var(--color-texto-claro);
+    font-weight: 700;
+    margin-bottom: 5px;
+    /* Separación de la etiqueta al input */
+    display: block;
+}
+
+.form-control-dark {
+    /* Mantener el estilo oscuro pero con borde más suave */
+    background-color: #3C3C3C;
+    border: 1px solid #555;
+    color: var(--color-texto-claro);
+    padding: 10px 15px;
+    /* Relleno más grande */
+    border-radius: 0;
+    /* Aseguramos que el input sea cuadrado */
+}
+
+/* El control de foco es crucial para el alto contraste */
+.form-control-dark:focus {
+    background-color: #3C3C3C;
+    color: var(--color-texto-claro);
+    border-color: var(--color-acento);
+    box-shadow: 0 0 0 0.2rem rgba(255, 136, 0, 0.4);
+    /* Sombra de enfoque del acento, más suave */
+}
+
+/* Botón de envío dentro del formulario */
+.formulario-dark .btn-acento {
+    /* Ajuste para el botón final */
+    padding: 12px 0;
+    font-size: 1.1rem;
+}
