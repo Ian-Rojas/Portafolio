@@ -4,11 +4,11 @@
 
 /* Variables y Tipografía */
 :root {
-    --color-acento: #FF8800;      /* Naranja/Amarillo Vibrante (Alto Contraste) */
-    --color-texto: #1A1A1A;       /* Negro Profundo */
-    --color-texto-claro: #FFFFFF; /* Blanco Puro */
-    --color-fondo: #F5F5F5;       /* Blanco Roto */
-    --color-acento-claro: #333333;/* Fondo gris oscuro para el hover */
+    --color-acento: #FF8800;      
+    --color-texto: #1A1A1A;       
+    --color-texto-claro: #FFFFFF; 
+    --color-fondo: #F5F5F5;       
+    --color-acento-claro: #333333;
     --font-mono: 'Inter', sans-serif;
 }
 
@@ -19,7 +19,7 @@ body {
     line-height: 1.6;
 }
 
-/* 1. Navbar y Footer (Alto Contraste) */
+/* 1. Navbar y Footer */
 .navbar {
     background-color: var(--color-texto) !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -47,30 +47,27 @@ body {
 
 /* 2. Sección Hero (Fondo Negro) */
 .hero-section-dark {
-    background-color: var(--color-texto); /* Fondo negro */
+    background-color: var(--color-texto); 
     color: var(--color-texto-claro);
     padding-top: 100px;
-    position: relative; /* Esencial para el canvas */
+    position: relative; 
     overflow: hidden; 
     z-index: 1; 
 }
 
-/* Contenido del Hero sobre las partículas */
 .hero-section-dark .container {
     position: relative;
-    z-index: 2; /* Asegura que tu texto y botón estén encima del canvas */
+    z-index: 2; 
 }
 
-/* Canvas para las partículas */
 #particles-canvas {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    z-index: 0; /* Detrás del contenido */
+    z-index: 0; 
 }
-
 
 .etiqueta-inicio {
     color: var(--color-acento);
@@ -80,9 +77,17 @@ body {
 }
 
 .titulo-hero {
-    font-size: 4.5rem; /* Título gigante */
+    font-size: 4.5rem; 
     font-weight: 900;
     line-height: 1.1;
+    min-height: 150px; 
+}
+
+.cursor {
+    font-weight: 300;
+    color: var(--color-acento);
+    opacity: 1;
+    transition: opacity 0.3s;
 }
 
 /* Títulos de Sección */
@@ -103,13 +108,13 @@ body {
     display: inline-block;
 }
 
-/* Botones y CTA (Color de acento) */
+/* Botones y CTA */
 .btn-acento {
     background-color: var(--color-acento);
     border-color: var(--color-acento);
-    color: var(--color-texto); /* Texto oscuro sobre el acento */
+    color: var(--color-texto); 
     font-weight: 700;
-    border-radius: 0; /* Bordes cuadrados */
+    border-radius: 0; 
     transition: all 0.3s ease;
 }
 
@@ -133,45 +138,25 @@ body {
 }
 
 /* 3. Sección About y Fotos */
-.perfil-texto-grande {
-    font-size: 1.5rem;
-    font-weight: 700;
+/* NUEVO: Estilo de texto de impacto, más grande y negrita */
+.perfil-texto-impacto {
+    font-size: 1.8rem; /* Más grande */
+    font-weight: 900; /* Más negrita */
+    line-height: 1.3;
 }
+
 .perfil-texto-base {
     font-size: 1.1rem;
 }
 
 .foto-perfil-monocromo {
     border-radius: 10px;
-    filter: grayscale(100%) contrast(1.1); /* Alto Contraste B&W */
+    filter: grayscale(100%) contrast(1.1); 
     border: 5px solid var(--color-acento);
-    transition: filter 0.5s ease;
-}
-.foto-perfil-monocromo:hover {
-    filter: grayscale(0%);
+    transition: none; 
 }
 
-/* NUEVAS CLASES PARA ANIMACIÓN DE FOTO EN PERFIL */
-.animar-envoltura-foto {
-    position: relative;
-    display: inline-block; /* Ajusta el contenedor al tamaño de la imagen */
-}
-
-/* El pseudo-elemento será el borde animado */
-.animar-envoltura-foto::after {
-    content: '';
-    position: absolute;
-    top: -5px;
-    left: -5px;
-    right: -5px;
-    bottom: -5px;
-    border: 5px solid transparent; 
-    border-radius: 10px;
-    z-index: 10;
-    pointer-events: none; /* Asegura que no interfiera con la imagen */
-}
-
-/* 4. Skills y Módulos Oscuros (Flexbox) */
+/* 4. Skills y Módulos Oscuros */
 .modulo-habilidad-dark {
     background-color: var(--color-texto);
     color: var(--color-texto-claro);
@@ -195,16 +180,26 @@ body {
     padding-left: 0;
     margin-top: 15px;
 }
-.lista-skills-acento li::before {
-    content: "•";
+.lista-skills-acento li {
+    font-size: 0.95rem; /* Pequeño para que quepa bien */
+}
+.lista-skills-acento li i {
     color: var(--color-acento);
-    font-weight: bold;
-    display: inline-block; 
-    width: 1em;
-    margin-left: -1em;
+    margin-right: 5px;
 }
 
-/* 5. Portafolio (Tarjetas Limpias) */
+/* Contador Animado Mínimo */
+.contador-animado {
+    font-size: 3.5rem; /* Un poco más pequeño para ser sutil */
+    font-weight: 900;
+    color: var(--color-acento);
+    text-align: center;
+    line-height: 1;
+    margin: 15px 0 5px; /* Más compacto */
+    text-shadow: 0 0 10px rgba(255, 136, 0, 0.5); 
+}
+
+/* 5. Portafolio */
 .proyecto-tarjeta-clean {
     border: 1px solid #ddd;
     border-radius: 0;
@@ -251,53 +246,47 @@ body {
     border-radius: 0; 
 }
 
-.form-control-dark:focus {
-    background-color: #3C3C3C;
-    color: var(--color-texto-claro);
-    border-color: var(--color-acento);
-    box-shadow: 0 0 0 0.2rem rgba(255, 136, 0, 0.4); 
+
+/* --- 7. Estilos para Timeline (Experiencia y Educación) --- */
+
+/* Limpieza de la descripción a una sola línea concisa */
+.timeline-descripcion-corta {
+    font-size: 0.95rem;
+    color: #555;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+.timeline-descripcion-corta-dark {
+    font-size: 0.95rem;
+    color: #CCCCCC; 
+    margin-top: 5px;
+    margin-bottom: 0;
 }
 
-.formulario-dark .btn-acento {
-    padding: 12px 0;
-    font-size: 1.1rem;
-}
+/* Estilos de Timeline (se mantienen los básicos) */
+.timeline { position: relative; padding: 20px 0; margin-left: 20px; }
+.timeline::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background-color: var(--color-acento); }
+.timeline-item { position: relative; padding-left: 40px; margin-bottom: 40px; display: flex; align-items: flex-start; }
+.timeline-dot { position: absolute; top: 5px; left: -8px; width: 20px; height: 20px; background-color: var(--color-fondo); border: 4px solid var(--color-acento); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; color: var(--color-texto); z-index: 1; }
+.timeline-titulo { font-weight: 700; color: var(--color-acento); margin-bottom: 0; }
+.timeline-empresa { font-weight: 400; color: var(--color-texto); font-style: italic; margin-bottom: 5px; width: 100%; }
+
+.timeline-dark { position: relative; padding: 20px 0; margin-left: 20px; }
+.timeline-dark::before { content: ''; position: absolute; top: 0; bottom: 0; left: 0; width: 4px; background-color: var(--color-acento); }
+.timeline-item-dark { position: relative; padding-left: 40px; margin-bottom: 40px; display: flex; align-items: flex-start; }
+.timeline-dot-dark { position: absolute; top: 5px; left: -8px; width: 20px; height: 20px; background-color: var(--color-texto); border: 4px solid var(--color-acento); border-radius: 50%; display: flex; justify-content: center; align-items: center; font-size: 0.8rem; color: var(--color-acento); z-index: 1; }
+.timeline-titulo-dark { font-weight: 700; color: var(--color-acento); margin-bottom: 0; }
+.timeline-institucion-dark { color: var(--color-texto-claro); font-style: italic; margin-bottom: 5px; width: 100%; }
 
 /* ANIME.JS - CLASES PARA ANIMACIONES (Por defecto invisibles) */
-.animar-entrada, .animar-elemento, .animar-modulo, .animar-tarjeta {
+.animar-entrada, .animar-elemento, .animar-modulo, .animar-tarjeta, .animar-zoom-target, .contador-animado {
     opacity: 0;
-    transform: translateY(20px); /* Ligeramente hacia abajo */
+    transform: translateY(20px); 
 }
 
-/* Clases de delay para anime.js */
-.animar-delay-1 { animation-delay: 0.1s; }
-.animar-delay-2 { animation-delay: 0.2s; }
-.animar-delay-3 { animation-delay: 0.3s; }
-.animar-delay-4 { animation-delay: 0.4s; }
-
-/* --- NUEVOS ESTILOS PARA REVEAL MÁS DRAMÁTICO --- */
-
-/* 1. Máscara para revelar texto */
-.text-reveal-clip {
-    position: relative;
-    overflow: hidden; /* Esto es el clip que oculta el texto antes de animar */
-    /* Altura mínima para asegurar que el clip funcione incluso sin JS */
-    min-height: 50px; 
-}
-
-/* El texto dentro debe comenzar fuera del clip */
-.text-reveal-clip p {
-    opacity: 0;
-    transform: translateY(100%); /* Comienza en la parte inferior del clip */
-    transition: none; /* Asegurar que no haya transición CSS */
-}
-
-/* 2. Estilo base de la foto B&W */
-.foto-perfil-monocromo {
-    /* Mantenemos el filtro B&W como estado inicial */
-    filter: grayscale(100%) contrast(1.1); 
-    /* El resto de estilos se mantienen */
-    border-radius: 10px;
-    border: 5px solid var(--color-acento);
-    transition: none; /* Anime.js manejará las transiciones */
+/* Rúbrica: Ítem 18 - Diseño responsivo */
+@media (max-width: 768px) {
+    .titulo-hero { font-size: 2.5rem; min-height: 100px; }
+    .titulo-seccion-acento, .titulo-seccion-claro { font-size: 2rem; }
+    .perfil-texto-impacto { font-size: 1.4rem; } /* Ajuste en móvil */
 }

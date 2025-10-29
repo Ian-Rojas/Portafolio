@@ -5,11 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Web | Ian Rojas </title>
-
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap" rel="stylesheet">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
     <link rel="stylesheet" href="static/css/style.css">
 </head>
 
@@ -28,37 +27,38 @@
                     <li class="nav-item"><a class="nav-link active" href="#inicio">INICIO</a></li>
                     <li class="nav-item"><a class="nav-link" href="#sobre-mi">PERFIL</a></li>
                     <li class="nav-item"><a class="nav-link" href="#habilidades">SKILLS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experiencia">EXPERIENCIA</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#formacion">EDUCACIÓN</a></li>
                     <li class="nav-item"><a class="nav-link" href="#portafolio">WORK</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contacto">CONTACT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">CONTACTO</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <section id="inicio" class="d-flex align-items-center vh-100 hero-section-dark">
-        <canvas id="particles-canvas"></canvas> 
+        <canvas id="particles-canvas"></canvas>
         <div class="container text-start">
             <p class="etiqueta-inicio animar-entrada animar-delay-1">// FULL-STACK DEVELOPER</p>
-            <h1 class="display-1 titulo-hero animar-entrada animar-delay-2">CREANDO EXPERIENCIAS WEB DE ALTO RENDIMIENTO.</h1>
-
-            <a href="#portafolio" id="btn-cta" class="btn btn-acento btn-lg mt-5 animar-entrada animar-delay-3">EXPLORA MI TRABAJO <i
-                    class="bi bi-arrow-right"></i></a>
+            <h1 class="display-1 titulo-hero animar-entrada animar-delay-2">CREANDO EXPERIENCIAS WEB DE ALTO
+                RENDIMIENTO.</h1>
+            <a href="#portafolio" id="btn-cta" class="btn btn-acento btn-lg mt-5 animar-entrada animar-delay-3">EXPLORA
+                MI TRABAJO <i class="bi bi-arrow-right"></i></a>
         </div>
     </section>
 
     <section id="sobre-mi" class="py-5 bloque-contenido">
         <div class="container">
-            <h2 class="titulo-seccion-acento animar-elemento" data-animar-palabras>¿QUIÉN SOY?</h2>
+            <h2 class="titulo-seccion-acento animar-elemento">¿QUIÉN SOY?</h2>
             <div class="row align-items-center mt-5">
                 <div class="col-md-7">
-                    <p class="perfil-texto-grande animar-elemento animar-delay-1">
-                        Soy **Ian Rojas**, un **Full Stack Developer** con **conocimientos básicos** en toda la
-                        stack, pero con **muchísimas ganas de seguir aprendiendo** y creciendo en el sector.
+                    <p class="perfil-texto-impacto animar-elemento animar-delay-1" data-animar-lineas>
+                        Soy **Ian Rojas**. Me especializo en **experiencias Front-End** y estoy construyendo bases
+                        sólidas en **Back-End (Node)**.
                     </p>
                     <p class="perfil-texto-base text-muted mt-4 animar-elemento animar-delay-2">
-                        Mi base es sólida en Front-End (HTML, CSS, JavaScript) y he iniciado mi camino en el
-                        Back-End (Node.js/Python). Me motiva la optimización de performance y la colaboración en
-                        entornos ágiles.
+                        Mi foco está en el **rendimiento** y la **arquitectura limpia**. Siempre buscando **aprender y
+                        colaborar** en proyectos retadores.
                     </p>
                     <div class="d-flex mt-4 animar-elemento animar-delay-3">
                         <a href="[Link CV PDF]" class="btn-enlace-secundario me-4">DESCARGAR CV</a>
@@ -66,8 +66,8 @@
                     </div>
                 </div>
                 <div class="col-md-5 text-center mt-5 mt-md-0">
-                    <div class="animar-envoltura-foto"> 
-                        <img src="static/img/perfil.jpg" alt="Foto profesional"
+                    <div class="animar-envoltura-foto">
+                        <img src="static/img/perfil.jpg" alt="Foto profesional Ian Rojas"
                             class="img-fluid foto-perfil-monocromo shadow-lg animar-zoom-target">
                     </div>
                 </div>
@@ -81,36 +81,106 @@
             <div class="row mt-5">
                 <div class="col-md-4 mb-4">
                     <div class="modulo-habilidad-dark animar-modulo animar-delay-2">
-                        <i class="bi bi-display icono-habilidad-acento"></i>
-                        <h4>FRONT-END</h4>
-                        <ul class="lista-skills-acento">
-                            <li>HTML5, CSS3, SASS</li>
-                            <li>JavaScript (ES6+)</li>
-                            <li>Bootstrap 5 (Responsive)</li>
-                        </ul>
+                        <i class="bi bi-speedometer2 icono-habilidad-acento"></i>
+                        <h4>FRONT-END CORE</h4>
+                        <div class="contador-animado" data-target="95">
+                            <span id="counter-metric">0</span>%
+                        </div>
+                        <p class="text-muted text-center mt-2">HTML5, CSS3, JS ES6+, Responsive Design.</p>
                     </div>
                 </div>
+
                 <div class="col-md-4 mb-4">
                     <div class="modulo-habilidad-dark animar-modulo animar-delay-3">
-                        <i class="bi bi-database icono-habilidad-acento"></i>
-                        <h4>BACK-END (BÁSICO)</h4>
+                        <i class="bi bi-terminal icono-habilidad-acento"></i>
+                        <h4>ECOSISTEMA</h4>
                         <ul class="lista-skills-acento">
-                            <li>Node.js (Básico)</li>
-                            <li>Python (Introducción)</li>
-                            <li>Bases de Datos (SQL)</li>
+                            <li><i class="bi bi-git"></i> Git, GitHub (Control de Versiones)</li>
+                            <li><i class="bi bi-node-js"></i> Node.js (Básico)</li>
+                            <li><i class="bi bi-database-fill"></i> SQL/Bases de Datos</li>
                         </ul>
                     </div>
                 </div>
+
                 <div class="col-md-4 mb-4">
-                    <div class="modulo-habilidad-dark animar-modulo animar-delay-4" onmouseover="cambiarFondo(this, 'var(--color-acento-claro)')"
+                    <div class="modulo-habilidad-dark animar-modulo animar-delay-4"
+                        onmouseover="cambiarFondo(this, 'var(--color-acento-claro)')"
                         onmouseout="cambiarFondo(this, 'var(--color-texto)')">
-                        <i class="bi bi-git icono-habilidad-acento"></i>
-                        <h4>HERRAMIENTAS</h4>
+                        <i class="bi bi-tools icono-habilidad-acento"></i>
+                        <h4>METODOLOGÍA</h4>
                         <ul class="lista-skills-acento">
-                            <li>Git, GitHub</li>
-                            <li>Lógica del DOM</li>
-                            <li>VS Code</li>
+                            <li><i class="bi bi-check-circle"></i> Metodologías Ágiles (Scrum)</li>
+                            <li><i class="bi bi-check-circle"></i> Dominio del DOM (Vanilla)</li>
+                            <li><i class="bi bi-check-circle"></i> VS Code & Debugging</li>
                         </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experiencia" class="py-5 bloque-contenido">
+        <div class="container">
+            <h2 class="titulo-seccion-acento animar-elemento">EXPERIENCIA</h2>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="timeline">
+                        <div class="timeline-item animar-elemento animar-delay-1">
+                            <div class="timeline-dot"><i class="bi bi-code-slash timeline-icon-light"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-titulo">Práctica Desarrollo Web</h4>
+                                <p class="timeline-empresa">TechSolutions Latam <span
+                                        class="timeline-date text-muted float-end">JUN 2024 - ACTUAL</span></p>
+                                <p class="timeline-descripcion-corta">Desarrollo modular de componentes Front-End
+                                    (React, accesibilidad).</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item animar-elemento animar-delay-2">
+                            <div class="timeline-dot"><i class="bi bi-cart-fill timeline-icon-light"></i></div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-titulo">Proyecto E-Commerce</h4>
+                                <p class="timeline-empresa">Portafolio Personal <span
+                                        class="timeline-date text-muted float-end">MAR 2024</span></p>
+                                <p class="timeline-descripcion-corta">Carrito funcional y gestión de lógica de stock con
+                                    JS puro.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formacion" class="py-5 bloque-contenido hero-section-dark">
+        <div class="container">
+            <h2 class="titulo-seccion-claro text-end animar-elemento">EDUCACIÓN</h2>
+            <div class="row mt-5">
+                <div class="col-lg-12">
+                    <div class="timeline-dark">
+                        <div class="timeline-item-dark animar-elemento animar-delay-1">
+                            <div class="timeline-dot-dark"><i class="bi bi-mortarboard-fill timeline-icon-dark"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-titulo-dark">Técnico Superior en Desarrollo</h4>
+                                <p class="timeline-institucion-dark">Instituto Tecnológico Avanzado (ITA) <span
+                                        class="timeline-date-dark text-muted float-end">2022 - 2025</span></p>
+                                <p class="timeline-descripcion-corta-dark">Enfoque Full-Stack y dominio de metodologías
+                                    ágiles.</p>
+                            </div>
+                        </div>
+
+                        <div class="timeline-item-dark animar-elemento animar-delay-2">
+                            <div class="timeline-dot-dark"><i class="bi bi-patch-check-fill timeline-icon-dark"></i>
+                            </div>
+                            <div class="timeline-content">
+                                <h4 class="timeline-titulo-dark">Certificación JavaScript ES6+</h4>
+                                <p class="timeline-institucion-dark">Google/Coursera <span
+                                        class="timeline-date-dark text-muted float-end">ENE 2025</span></p>
+                                <p class="timeline-descripcion-corta-dark">Dominio avanzado de asincronía y manipulación
+                                    eficiente del DOM.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -119,15 +189,14 @@
 
     <section id="portafolio" class="py-5 bloque-contenido">
         <div class="container">
-            <h2 class="titulo-seccion-acento animar-elemento">PORTAFOLIO</h2>
+            <h2 class="titulo-seccion-acento animar-elemento">PORTAFOLIO (WORK)</h2>
             <div class="row row-cols-1 row-cols-md-2 g-5 mt-4">
                 <div class="col">
                     <div class="card proyecto-tarjeta-clean animar-tarjeta animar-delay-1">
                         <img src="static/img/proyecto-1.jpg" class="card-img-top" alt="Proyecto E-commerce">
                         <div class="card-body">
                             <h5 class="card-title-acento">E-Commerce Dinámico (JS)</h5>
-                            <p class="card-text-base">Carrito de compras funcional con JS puro, implementando la lógica
-                                de stock y totales.</p>
+                            <p class="card-text-base">Carrito funcional JS puro.</p>
                             <a href="[ENLACE A REPO DE GITHUB 1]" target="_blank" class="btn-enlace-acento"
                                 onclick="alertaClick(this)">VER REPO <i class="bi bi-arrow-right-short"></i></a>
                         </div>
@@ -138,9 +207,9 @@
                         <img src="static/img/proyecto-2.jpg" class="card-img-top" alt="Landing Page">
                         <div class="card-body">
                             <h5 class="card-title-acento">Landing Page (DOM Example)</h5>
-                            <p class="card-text-base">Demostración de manipulación avanzada del DOM.</p>
-                            <button class="btn-remover-js" onclick="removerTarjetaEjemplo(this)">REMOVER DEMO JS <i
-                                    class="bi bi-trash"></i></button>
+                            <p class="card-text-base">Manipulación avanzada del DOM.</p>
+                            <button class="btn-remover-js btn-acento" onclick="removerTarjetaEjemplo(this)">REMOVER DEMO
+                                JS <i class="bi bi-trash"></i></button>
                         </div>
                     </div>
                 </div>
@@ -152,8 +221,8 @@
         <div class="container">
             <h2 class="titulo-seccion-claro text-center mb-5 animar-elemento">CONTACTO</h2>
             <div class="row justify-content-center">
-                <div class="col-md-5"> 
-                    <form class="formulario-dark p-4 p-md-5 animar-elemento"> 
+                <div class="col-md-5">
+                    <form class="formulario-dark p-4 p-md-5 animar-elemento">
                         <div class="mb-4">
                             <label for="campo-nombre" class="form-label-claro">Nombre</label>
                             <input type="text" class="form-control-dark" id="campo-nombre" placeholder="[Tu Nombre]">
@@ -165,8 +234,8 @@
                         </div>
                         <div class="mb-5">
                             <label for="campo-mensaje" class="form-label-claro">Mensaje</label>
-                            <textarea class="form-control-dark" id="campo-mensaje" rows="4"
-                                placeholder="¿Cómo puedo ayudarte?"></textarea>
+                            <textarea class="form-control-dark" id="campo-mensaje" rows="3"
+                                placeholder="¿Hablemos de tu proyecto?"></textarea>
                         </div>
                         <button type="submit" class="btn btn-acento w-100">ENVIAR MENSAJE</button>
                     </form>
@@ -176,7 +245,7 @@
     </section>
 
     <footer class="text-center py-3 footer-dark">
-        <p class="mb-0">© 2025 [Tu Nombre] | <a href="[Link GitHub]" target="_blank" class="text-acento">GitHub</a></p>
+        <p class="mb-0">© 2025 Ian Rojas | <a href="[Link GitHub]" target="_blank" class="text-acento">GitHub</a></p>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
