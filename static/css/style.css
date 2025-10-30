@@ -1,5 +1,5 @@
 /*
-  Archivo: style.css - Diseño de Alto Contraste (Blanco, Negro, Naranja)
+    Archivo: style.css - Diseño de Alto Contraste (Blanco, Negro, Naranja)
 */
 
 /* Variables y Tipografía */
@@ -279,10 +279,10 @@ body {
 .timeline-institucion-dark { color: var(--color-texto-claro); font-style: italic; margin-bottom: 5px; width: 100%; }
 
 /* ANIME.JS - CLASES PARA ANIMACIONES (Por defecto invisibles) */
-.animar-entrada, .animar-elemento, .animar-modulo, .animar-tarjeta, .animar-zoom-target, .contador-animado {
-    opacity: 0;
-    transform: translateY(20px); 
-}
+/* CÓDIGO CLAVE EN static/css/style.css (Debe estar presente) */
+
+/* ANIME.JS - CLASES PARA ANIMACIONES (Por defecto invisibles) */
+
 
 /* Rúbrica: Ítem 18 - Diseño responsivo */
 @media (max-width: 768px) {
