@@ -1,0 +1,31 @@
+# ----------------------------------------------
+# Configuración general de Sistemas Operativos
+# ----------------------------------------------
+.DS_Store             # Archivos de metadatos de macOS
+Thumbs.db             # Miniaturas de Windows
+ehthumbs.db           # Miniaturas de Windows
+*.log                 # Archivos de registro genéricos
+
+# ----------------------------------------------
+# Archivos de Entorno y Seguridad (MUY IMPORTANTE)
+# ----------------------------------------------
+# Si en el futuro usas Node.js (back-end), aquí va node_modules
+# /node_modules
+.env                  # Variables de entorno (si usas Formspree API Key)
+.local                # Archivos de configuración local
+.vscode/settings.json # Configuración específica del editor de usuario
+
+# ----------------------------------------------
+# Archivos de Dependencias de Python/BD (Proyecto Ciclovías DB)
+# ----------------------------------------------
+__pycache__/          # Carpeta de caché de Python
+*.pyc                 # Archivos compilados de Python
+/venv/                # Entornos virtuales de Python (si usas)
+/env/                 # Entornos virtuales alternativos
+
+# ----------------------------------------------
+# Archivos Temporales de Edición/Caché
+# ----------------------------------------------
+*~                    # Archivos de respaldo de editores de texto
+*.tmp                 # Archivos temporales
+*.swp                 # Swap files (Vim)
